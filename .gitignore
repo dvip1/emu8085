@@ -1,0 +1,24 @@
+# Build directories
+builddir/
+
+# Executables
+emu8085
+
+# Object files
+*.o
+
+# Libraries
+*.a
+
+# CLion IDE files
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Temporary files
+*~
