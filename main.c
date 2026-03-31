@@ -23,9 +23,21 @@
 */
 
 #include <stdio.h>
+#include "memory.h"
+#include "cpu8085.h"
 
-int main(void)
+int main(int argc, char **argv)
 {
-    printf("Hello, World!\n");
+    if (argc < 2)
+    {
+        printf("Usage: %s <program.bin>\n", argv[0]);
+    }
+
+    // CPU8085 cpu = {0};
+    mem_init();
+
+    if (!load_rom(argv[1]))
+        return 1;
+    printf("First instruction byte in memory: 0x%02X\n", mem_read(0x0000));
     return 0;
 }
