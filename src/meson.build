@@ -1,5 +1,6 @@
 src_files = files(
-  'memory.c'
+  'memory.c',
+  'cpu_instructions.c'
 )
 
 libemu = static_library(
